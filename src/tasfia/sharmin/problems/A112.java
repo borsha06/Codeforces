@@ -13,27 +13,19 @@ public class A112 {
 			st2 = st2.toLowerCase();
 			int n1 = st1.charAt(i);
 			int n2 = st2.charAt(i);
+			if(n1 > n2){
 
-			if(n1==n2){
-				e++;
+				System.out.println(1);
+				return;
 			}
-			else if(n1<n2){
-				first++;
+			else if(n1 < n2){
+				System.out.println(-1);
+				return;
 			}
-			else {
-				second++;
-			}
-		}
-		if(e==st1.length()){
-			System.out.println(0);
-		}
-		else if(first < second){
 
-			System.out.println(-1);
 		}
-		else{
-			System.out.println(1);
-		}
+		System.out.println(0);
+
 
 	}
 }
