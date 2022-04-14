@@ -1,4 +1,4 @@
-package tasfia.sharmin.problems;
+//package tasfia.sharmin.problems;
 
 import java.util.Scanner;
 
@@ -7,14 +7,14 @@ public class A265 {
 		Scanner in = new Scanner(System.in);
 		String s1 = in.nextLine();
 		String s2 = in.nextLine();
-		int c =1;
-		for(int i=0; i<s2.length();i++)
-		{
-			if(s2.charAt(i)== s1.charAt(i)){
-				c++;
+		int j = 0;
+		char current = s1.charAt(j);
+		for (int i = 0; i < s2.length(); i++) {
+			if (s2.charAt(i) == current) {
+				j++;
+				current = s1.charAt(j);
 			}
 		}
-
-		System.out.println(c);
+		System.out.println(j + 1);
 	}
 }
